@@ -50,6 +50,11 @@ Hier ist das protokoll meiner anfrage und entwicklung dieser applikation, falls 
 
 - https://chat.mistral.ai/chat/7d0f57f6-a7ef-49a2-92ef-376813790e10
 
+URLs:
+
+- [Script URL](https://script.google.com/macros/s/AKfycbxYI49XOSyBZjMvnzBg5sSupedelS_9EQ08HiXwr9skWS4Xnk7IYyxLAID08j5bbyO8XQ/exec)
+
+
 ## Author
 
 Jeremy Tammik,
@@ -63,3 +68,4 @@ Jeremy Tammik,
 
 This sample is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 Please see the [LICENSE](LICENSE) file for full details.
+
