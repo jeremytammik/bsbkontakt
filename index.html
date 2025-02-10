@@ -25,7 +25,9 @@
       event.preventDefault();
 
       var formData = new FormData(event.target);
-      fetch('YOUR_WEB_APP_URL', {
+      console.log([...formData.entries()]);
+      var bsb_web_app_url = 'https://script.google.com/macros/s/AKfycbxYI49XOSyBZjMvnzBg5sSupedelS_9EQ08HiXwr9skWS4Xnk7IYyxLAID08j5bbyO8XQ/exec';
+      fetch(bsb_web_app_url, {
         method: 'POST',
         body: formData
       })
