@@ -2,30 +2,88 @@
 <html>
 <head>
   <title>Data Entry Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-container h2 {
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-group textarea {
+      resize: vertical;
+    }
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
 <body>
-  <form id="dataForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br>
-
-    <label for="surname">Surname:</label>
-    <input type="text" id="surname" name="surname" required><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
-
-    <label for="notes">Notes:</label>
-    <textarea id="notes" name="notes"></textarea><br>
-
-    <button type="submit">Submit</button>
-  </form>
+  <div class="form-container">
+    <h2>Data Entry Form</h2>
+    <form id="dataForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
 
   <script>
     document.getElementById('dataForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
       var formData = new FormData(event.target);
-      console.log([...formData.entries()]);
       var bsb_web_app_url = 'https://script.google.com/macros/s/AKfycbxYI49XOSyBZjMvnzBg5sSupedelS_9EQ08HiXwr9skWS4Xnk7IYyxLAID08j5bbyO8XQ/exec';
       fetch(bsb_web_app_url, {
         method: 'POST',
@@ -42,3 +100,4 @@
   </script>
 </body>
 </html>
+
