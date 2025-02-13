@@ -42,11 +42,13 @@
     }
     .form-group .checkbox-group {
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      gap: 20px; /* Space between checkboxes */
     }
     .form-group .checkbox-group label {
       display: flex;
       align-items: center;
+      margin-bottom: 0; /* Remove bottom margin for inline display */
     }
     .form-group .checkbox-group input {
       margin-right: 5px;
@@ -116,7 +118,7 @@
       var formData = new FormData(event.target);
       var bsb_web_app_url = 'https://script.google.com/macros/s/AKfycbyvjdZMnvIMinr-Gg2S4aFYav-nP1Ym1SRKS9uXQQjwjgFiBEtXFfPS-vX0UTKhUJS-Nw/exec';
 
-      fetch(bsb_web_app_url, {
+      fetch('bsb_web_app_url', {
         method: 'POST',
         body: formData
       })
