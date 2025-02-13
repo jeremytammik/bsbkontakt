@@ -39,10 +39,6 @@ Hier ist die URL der app, die du gerade sofort testen kannst:
 
 - https://jeremytammik.github.io/bsbkontakt/
 
-Hier ist die URL der tabelle, in dem die daten eingetragen werden:
-
-- https://docs.google.com/spreadsheets/d/1vLdfyc12y5USJhDrvCgOHMUmgd2AC4uulljYeVQkxyA/edit?gid=0#gid=0
-
 ich bin leider kein sicherheitsexperte. Man kann irgendwie den zugriff auf die tabelle einschraenken, und das muss man wohl auch machen, wenn man den datenschutz wahren moechte, was man ja auch muss.
 
 Ich hatte freude das hier zu machen.
@@ -55,9 +51,18 @@ Hier ist das protokoll meiner anfrage und entwicklung dieser applikation, falls 
 
 - https://chat.mistral.ai/chat/7d0f57f6-a7ef-49a2-92ef-376813790e10
 
+<!---
+
+Hier ist die URL der tabelle, in dem die daten eingetragen werden:
+
+- https://docs.google.com/spreadsheets/d/1vLdfyc12y5USJhDrvCgOHMUmgd2AC4uulljYeVQkxyA/edit?gid=0#gid=0
+
 URLs:
 
 - [Script URL](https://script.google.com/macros/s/AKfycbxYI49XOSyBZjMvnzBg5sSupedelS_9EQ08HiXwr9skWS4Xnk7IYyxLAID08j5bbyO8XQ/exec)
+
+script url version 3: https://script.google.com/macros/s/AKfycbzs2Gv-5b9fa8YwszxKnRgiK-pbJ2Up3c8b8CVZdbueEbKK6AGxMTESuT-ka47GO9EMIw/exec
+-->
 
 ### Additional Requirements
 
@@ -77,9 +82,6 @@ Die Ablage in der Cloud ist bestimmt auch sicher &ndash; davon sollte man ausgeh
 
 Das Schreiben in die Cloud und das Exportieren in eine Excel-Datei ist wohl am meisten zugriffsgefährdet.
 Die Datenübertragung muss über das Smart Phone Netz erfolgen und nicht z.B. über ein offenes WLAN.
-
-script url version 3: https://script.google.com/macros/s/AKfycbzs2Gv-5b9fa8YwszxKnRgiK-pbJ2Up3c8b8CVZdbueEbKK6AGxMTESuT-ka47GO9EMIw/exec
-
 
 ## Author
 
