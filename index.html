@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BSB Kontakt</title>
+  <title>BSB PVS Kontakt</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -40,6 +40,17 @@
     .form-group textarea {
       resize: vertical;
     }
+    .form-group .checkbox-group {
+      display: flex;
+      justify-content: space-between;
+    }
+    .form-group .checkbox-group label {
+      display: flex;
+      align-items: center;
+    }
+    .form-group .checkbox-group input {
+      margin-right: 5px;
+    }
     .form-group button {
       padding: 10px 20px;
       background-color: #28a745;
@@ -55,26 +66,45 @@
 </head>
 <body>
   <div class="form-container">
-    <h2>BSB Kontakt</h2>
+    <h2>BSB PVS Kontakt</h2>
     <form id="dataForm">
+      <div class="form-group">
+        <label for="berater">Berater:</label>
+        <input type="text" id="berater" name="berater" required>
+      </div>
       <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
       </div>
       <div class="form-group">
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" required>
+        <label for="strasse">Straße:</label>
+        <input type="text" id="strasse" name="strasse" required>
+      </div>
+      <div class="form-group">
+        <label for="ort">Ort:</label>
+        <input type="text" id="ort" name="ort" required>
+      </div>
+      <div class="form-group">
+        <label for="telefon">Telefon:</label>
+        <input type="text" id="telefon" name="telefon" required>
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
       </div>
-      <div class="form-group">
-        <label for="notes">Notes:</label>
-        <textarea id="notes" name="notes"></textarea>
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" id="bsb" name="bsb"> BSB
+        </label>
+        <label>
+          <input type="checkbox" id="pvs" name="pvs"> PVS
+        </label>
+        <label>
+          <input type="checkbox" id="daten" name="daten"> Daten
+        </label>
       </div>
       <div class="form-group">
-        <button type="submit">Submit</button>
+        <button type="submit">Absenden</button>
       </div>
     </form>
   </div>
@@ -91,13 +121,12 @@
       })
       .then(response => response.text())
       .then(data => {
-        alert('Data submitted successfully!');
+        alert('Daten erfolgreich übermittelt!');
       })
       .catch(error => {
-        console.error('Error:', error);
+        console.error('Fehler:', error);
       });
     });
   </script>
 </body>
 </html>
-
