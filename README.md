@@ -2,14 +2,19 @@
 
 BSB Regio Messe Kontakt-Sammlung HTML
 
-## Motivation and Development
+## Motivation
 
 Ein Punkt in deiner Mail hat mein Interesse geweckt:
 
 - Kontakt-Sammlung: wir benötigen ein Formblatt, um Adressen und Themen von Interessenten zu erfassen
 
 Ich bin anderer meinung.
-Der punkt hat mich animiert, eine neue kleine app zu implementieren, um die kontaktdaten zu sammeln, anstatt sie haendisch auf zetteln zu kritzeln, die nachher muehsam verwaltet, entziffert, abgeschrieben, uebertragen und korrigiert werden muessen.
+Anstatt sie haendisch auf zetteln zu erfassen, kritzeln, nachher muehsam verwalten, entziffern, abschreiben, uebertragen und korrigieren, koennte man sie digital erfassen.
+
+
+## Development
+
+### Initial Test Implementation
 
 Ich habe eine kleine app programmiert, die in jedem browser laeuft, also auf jedem mobiltelefon und auf jedem PC.
 
@@ -53,6 +58,25 @@ Hier ist das protokoll meiner anfrage und entwicklung dieser applikation, falls 
 URLs:
 
 - [Script URL](https://script.google.com/macros/s/AKfycbxYI49XOSyBZjMvnzBg5sSupedelS_9EQ08HiXwr9skWS4Xnk7IYyxLAID08j5bbyO8XQ/exec)
+
+### Additional Requirements
+
+Wenn Du mit einer App die Interessenten-Daten vollständig erfassen möchtest, dann brauchst Du mindestens 4 Menus.
+Das Menu 2 kann sehr eng werden...
+
+![App menus](img/interessenten_erfassung_app.png "App menus")
+
+Auf Papier sollte man eine Unterschrift verlangen, in der App würde ein Häkchen zur Zustimmung und Kenntnisnahme unserer Rahmenbedingungen durch den Interessenten genügen.
+
+![Paper form](img/interessenten_erfassung_paper.png "Paper form")
+
+Die von Dir angesprochene Datensicherheit ist etwas, das wir selbst bestimmen und steuern können.
+Zugriff braucht jeder, der Standdienst hat und die App auf seinem Smart Phone aufruft, um die Interessenten-Daten zu erfassen.
+
+Die Ablage in der Cloud ist bestimmt auch sicher &ndash; davon sollte man ausgehen, wenn Google diesen Service anbietet.
+
+Das Schreiben in die Cloud und das Exportieren in eine Excel-Datei ist wohl am meisten zugriffsgefährdet.
+Die Datenübertragung muss über das Smart Phone Netz erfolgen und nicht z.B. über ein offenes WLAN.
 
 
 ## Author
