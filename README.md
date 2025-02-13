@@ -78,6 +78,8 @@ Die Ablage in der Cloud ist bestimmt auch sicher &ndash; davon sollte man ausgeh
 Das Schreiben in die Cloud und das Exportieren in eine Excel-Datei ist wohl am meisten zugriffsgefährdet.
 Die Datenübertragung muss über das Smart Phone Netz erfolgen und nicht z.B. über ein offenes WLAN.
 
+script url version 3: https://script.google.com/macros/s/AKfycbzs2Gv-5b9fa8YwszxKnRgiK-pbJ2Up3c8b8CVZdbueEbKK6AGxMTESuT-ka47GO9EMIw/exec
+
 
 ## Author
 

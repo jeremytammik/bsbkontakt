@@ -48,7 +48,7 @@
     .form-group .checkbox-group label {
       display: flex;
       align-items: center;
-      margin-bottom: 0; /* Remove bottom margin for inline display */
+      white-space: nowrap; /* Prevent label text from wrapping */
     }
     .form-group .checkbox-group input {
       margin-right: 5px;
@@ -144,8 +144,7 @@
 
       if (allFilled) {
         var formData = new FormData(event.target);
-        var bsb_web_app_url = 'https://script.google.com/macros/s/AKfycbyvjdZMnvIMinr-Gg2S4aFYav-nP1Ym1SRKS9uXQQjwjgFiBEtXFfPS-vX0UTKhUJS-Nw/exec';
-        fetch('bsb_web_app_url', {
+        fetch('https://script.google.com/macros/s/AKfycbzs2Gv-5b9fa8YwszxKnRgiK-pbJ2Up3c8b8CVZdbueEbKK6AGxMTESuT-ka47GO9EMIw/exec', {
           method: 'POST',
           body: formData
         })
@@ -161,4 +160,5 @@
   </script>
 </body>
 </html>
+
 
