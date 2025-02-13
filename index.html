@@ -64,6 +64,10 @@
     .form-group button:hover {
       background-color: #218838;
     }
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -108,6 +112,7 @@
       <div class="form-group">
         <button type="submit">Absenden</button>
       </div>
+      <div class="error-message" id="error-message"></div>
     </form>
   </div>
 
@@ -115,21 +120,45 @@
     document.getElementById('dataForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      var formData = new FormData(event.target);
-      var bsb_web_app_url = 'https://script.google.com/macros/s/AKfycbyvjdZMnvIMinr-Gg2S4aFYav-nP1Ym1SRKS9uXQQjwjgFiBEtXFfPS-vX0UTKhUJS-Nw/exec';
+      // Clear previous error messages
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.textContent = '';
 
-      fetch('bsb_web_app_url', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.text())
-      .then(data => {
-        alert('Daten erfolgreich übermittelt!');
-      })
-      .catch(error => {
-        console.error('Fehler:', error);
+      // Validate required fields
+      const requiredFields = ['berater', 'name', 'strasse', 'ort', 'telefon', 'email'];
+      let allFilled = true;
+      requiredFields.forEach(field => {
+        const input = document.getElementById(field);
+        if (!input.value.trim()) {
+          allFilled = false;
+          errorMessage.textContent = 'Bitte füllen Sie alle Felder aus.';
+        }
       });
+
+      // Validate checkbox
+      const datenCheckbox = document.getElementById('daten');
+      if (!datenCheckbox.checked) {
+        allFilled = false;
+        errorMessage.textContent = 'Sie müssen die "Daten" Checkbox aktivieren, um fortzufahren.';
+      }
+
+      if (allFilled) {
+        var formData = new FormData(event.target);
+        var bsb_web_app_url = 'https://script.google.com/macros/s/AKfycbyvjdZMnvIMinr-Gg2S4aFYav-nP1Ym1SRKS9uXQQjwjgFiBEtXFfPS-vX0UTKhUJS-Nw/exec';
+        fetch('bsb_web_app_url', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+          alert('Daten erfolgreich übermittelt!');
+        })
+        .catch(error => {
+          console.error('Fehler:', error);
+        });
+      }
     });
   </script>
 </body>
 </html>
+
