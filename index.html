@@ -99,6 +99,10 @@
         <input type="email" id="email" name="email" required>
       </div>
       <div class="form-group">
+        <label for="notiz">Notiz:</label>
+        <textarea id="notiz" name="notiz" rows="4"></textarea>
+      </div>
+      <div class="form-group">
         <table class="checkbox-table">
           <tr>
             <td><input type="checkbox" id="bsb" name="bsb"> BSB</td>
@@ -137,7 +141,7 @@
 
       if (allFilled) {
         var formData = new FormData(event.target);
-        fetch('https://script.google.com/macros/s/AKfycby0mojSNK9Frnzn9ImbBkrkhmCx6Vnm55gEAB_IGgOpo9wfrBkNaYw3ojENSrEa-_iXow/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwEnFNQG8IbA-al21kMz2vgt8DnA_a_09P_-gfj2thpM6XDdI-ItsPLbnZIBRb_koVV3g/exec', {
           method: 'POST',
           body: formData
         })
