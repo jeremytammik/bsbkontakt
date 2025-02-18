@@ -39,7 +39,10 @@ Hier ist die URL der app, die du gerade sofort testen kannst:
 
 - https://jeremytammik.github.io/bsbkontakt/
 
-ich bin leider kein sicherheitsexperte. Man kann irgendwie den zugriff auf die tabelle einschraenken, und das muss man wohl auch machen, wenn man den datenschutz wahren moechte, was man ja auch muss.
+ich bin leider kein sicherheitsexperte.
+Man kann irgendwie den zugriff auf die tabelle einschraenken, und das muss man wohl auch machen, wenn man den datenschutz wahren moechte, was man ja auch muss, z.B.:
+"Access Control: Restrict access to the Google Sheet to only those who need it.
+Use Google Sheets' sharing settings to control who can view or edit the data."
 
 Ich hatte freude das hier zu machen.
 
